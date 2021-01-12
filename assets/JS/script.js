@@ -7,52 +7,30 @@ var usersPassword = [];
 
 function randompassword() {
 
-    var usersAnswerSC = confirm("Do you want special characters?");
-    var usersAnswerN = confirm("Do you want numbers?");
-    var usersAnswerLC = confirm("Do you want lower case letters?");
-    var usersAnswerUC = confirm("Do you want upper case letters?");
+  var usersAnswerSC = confirm("Do you want special characters?");
+  var usersAnswerN = confirm("Do you want numbers?");
+  var usersAnswerLC = confirm("Do you want lower case letters?");
+  var usersAnswerUC = confirm("Do you want upper case letters?");
 
-    if (usersAnswerSC === true) {
-        usersPassword.push(...specialCharacters);
-    //   var SCgenerated = Math.floor(Math.random() * 14); 
-    //   var randomSC = specialCharacters[SCgenerated];
-    //   usersPassword += randomSC;
-        console.log("specialCharacters", usersPassword)
-    }
+  if (usersAnswerSC === true) {
+    usersPassword.push(...specialCharacters);
+  }
 
-    if (usersAnswerN === true) {
-        usersPassword.push(...numbers);
-    //   var randomN = numbers[Ngenerated];
-    //   usersPassword += randomN;
-    console.log("numbers", usersPassword)
+  if (usersAnswerN === true) {
+    usersPassword.push(...numbers);
+  }
 
-    }
+  if (usersAnswerUC === true) {
+    usersPassword.push(...upperAlpha);
+  }
 
-    if (usersAnswerUC === true) {
-        usersPassword.push(...upperAlpha);
-    //   var randomUC = upperAlpha[UCgenerated];
-    //   usersPassword += randomUC;
-    console.log("upperAlpha", usersPassword)
-
-    }
-
-      if (usersAnswerLC === true) {
-        usersPassword.push(...lowerAlpha);
-        // var randomLC = lowerAlpha[LCgenerated];
-        // usersPassword+= randomLC;
-        console.log("lowerAlpha", usersPassword)
-
-    }
-    console.log(usersPassword)
-    
-    var passwordMax = [...usersPassword, ...usersPassword]
-    // passwordMax = Math.floor(Math.random());
-    // console.log(passwordMax)
-    // push character to an array
-// randomize array
-// slice to usersNumber
-// turn into a string
-// display 
+  if (usersAnswerLC === true) {
+    usersPassword.push(...lowerAlpha);
+  }
+  
+  var passwordMax = [...usersPassword, ...usersPassword]
+  // passwordMax = Math.floor(Math.random());
+  // console.log(passwordMax)
 }
 
 function writePassword() {
@@ -61,7 +39,7 @@ function writePassword() {
   var usersNumber = parseInt(prompt("Between 8 and 128, how many characters would you like?"));
 
   passwordText.value = usersPassword;
-    
+
   if (usersNumber < 8 || usersNumber > 128) {
     alert("This is an invalid password length!");
     writePassword()
@@ -70,15 +48,13 @@ function writePassword() {
     console.log("here")
   }
 
-//   for (var i = 0; i < usersNumber; i++) {
-// }
-// console.log(usersPassword)
+  //   for (var i = 0; i < usersNumber; i++) {
+  // }
 }
-// push character to an array
+generateBtn.addEventListener("click", writePassword);
+
+
 // randomize array
 // slice to usersNumber
 // turn into a string
-// display
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// display 

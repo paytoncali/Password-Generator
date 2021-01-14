@@ -7,7 +7,6 @@ var usersPassword = [];
 
 
 function randompassword(usersNumber) {
-  console.log(usersNumber)
   var usersAnswerSC = confirm("Do you want special characters?");
   var usersAnswerN = confirm("Do you want numbers?");
   var usersAnswerLC = confirm("Do you want lower case letters?");
@@ -37,14 +36,16 @@ function randompassword(usersNumber) {
 
   passwordFinal = passwordFinal.toString();
 
-  console.log(passwordFinal.replace(/,/g, ''));
+  passwordFinal = passwordFinal.replace(/,/g, '');
+  
+  var password = passwordFinal;
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+
 }
 
 function writePassword() {
-  // var password = generatePassword();
-  var passwordText = document.querySelector("#password");
   var usersNumber = prompt("Between 8 and 128, how many characters would you like?");
-  passwordText.value = usersPassword;
 
   if (usersNumber < 8 || usersNumber > 128) {
     alert("This is an invalid password length!");
@@ -53,5 +54,4 @@ function writePassword() {
     randompassword(usersNumber);
   }
 }
-
 generateBtn.addEventListener("click", writePassword);

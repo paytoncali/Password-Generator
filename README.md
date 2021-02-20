@@ -11,6 +11,10 @@ Once my inital variables were declared, I then began declaring additional varabi
 
 The use of this program is to generate a random password for the user using lower case, upper case, numbers, and special characters depending on what the user wants in their password. 
 
+## Links
+https://github.com/paytoncali/Password-Generator.git;
+https://paytoncali.github.io/Password-Generator/;
+
 ![password generator result](https://user-images.githubusercontent.com/74576982/104534882-b9995f80-55da-11eb-8f91-ed954b37a6d8.png)
 ![password generator](https://user-images.githubusercontent.com/74576982/104534884-bb632300-55da-11eb-81a8-e19f56c8bb0c.png)
 
